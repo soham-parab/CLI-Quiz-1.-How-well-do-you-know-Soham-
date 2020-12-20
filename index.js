@@ -3,20 +3,20 @@ var readlineSync = require('readline-sync')
 
 var score = 0
 var username = readlineSync.question('Hi there! Whats your name? ')
-console.log("************Welcome "+username+" to 'How well do you know Soham'*************")
-console.log("\n##############################")
+console.log("\n Welcome "+username+" to 'How well do you know Soham'*************")
+
 
 console.log("\n*******RULES******")
 console.log('1. There are 10 Questions \n2. Each Question gives you 1 point \n3. Each wrong answer gives you -1 point')
-console.log("\n##############################")
+
 
 var questionOne = {
-  question : 'What is my Birth Place \n a. Konkan \n b. Pune \n c. Mumbai  \n d. Goa \n',
+  question : 'What is my Birth Place? \n a. Konkan \n b. Pune \n c. Mumbai  \n d. Goa \n',
   answer : 'a'
 }
 
 var questionTwo = {
-  question : 'How old am I? \n a. VERY OLD\n b. 23  \n c. 22 \n',
+  question : 'How old am I? \n a. VERY OLD\n b. 23  \n c. 22 d. 25\n',
   answer : 'b'
 }
 
@@ -31,8 +31,8 @@ var questionFour = {
 }
 
 var questionFive = {
-  question : 'How many times did Soham break his left forearm? \n a.Once \n b. Twice \n c.Thrice\n d. 4 times' ,
-  answer : 'a'
+  question : 'How many times did Soham break his left forearm? \n a.Once \n b. Twice \n c.Thrice\n d. 4 times\n' ,
+  answer : 'b'
 }
 
 var questionSix = {
@@ -42,22 +42,22 @@ var questionSix = {
 
 var questionSeven = {
   question : 'What is Sohams favorite movie \n a. The Shawshank Redemption \n b. The Big Short \n c. Interstellar \n d.The Departed  \n',
-  answer : 'd'
+  answer : 'a'
 }
 
 var questionEight = {
-  question : ' \n a. John Mayer \n b. John Mayer \n c. John Mayer \n d. John Mayer \n',
-  answer : 'c'
+  question : 'Who is his favorite artist? \n a. John Mayer \n b. The Lumineers  \n c. Tame Impala \n d. Red Hot Chilli Peppers \n',
+  answer : 'a'
 }
 
 var questionNine = {
-  question : 'I am currently Working in \n a. PayPal \n b. Cognizant \n c. TCS \n d. Ford \n',
-  answer : 'b'
+  question : 'What dessert does Soham dislike? \n a.Cake  \n b.Pastry  \n c.Pie  \n d.Doughnut \n',
+  answer : 'd'
 }
 
 var questionTen = {
-  question : 'Where am i currently Deployed \n a. Chennai \n b. Banglore \n c. Pune \n d. Kolkata \n',
-  answer : 'a'
+  question : 'What is his dream destination? \n a.Niagara Falls \n b.To be under the Northern Lights  \n c.To visit the RV from "Into the Wild" \n d. To see the Grand Canyon  \n',
+  answer : 'b'
 }
 
 var questionArr = [questionOne, questionTwo, questionThree, questionFour, questionFive, questionSix, questionSeven, questionEight, questionNine, questionTen]
@@ -82,11 +82,10 @@ for(i =0; i<questionArr.length;i++){
 var highScore  = 9;
 console.log('Final Score '+score)
 if(score>highScore){
-  console.log('Congratulations, you have setup a new highScore '+score)
-  console.log('Send a Screenshot to me to claim Prize')
+  console.log('Congratulations, you have setup a new highScore '+score)  
 }else{
-  console.log('you were just '+ (highScore-score) +' away from making a highScore')
-  console.log("Better Luck Next Time !!!")
+  console.log('You were only '+ (highScore-score) +' away from the highScore')
+  console.log("Better luck next time!")
 }  
 
 
